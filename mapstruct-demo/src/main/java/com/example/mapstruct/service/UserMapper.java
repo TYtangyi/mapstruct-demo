@@ -30,6 +30,7 @@ public interface UserMapper {
     //更新实例
     @Mapping(source = "userDto.specialization", target = "specialty")
     @Mapping(source = "userDto.classDtos", target = "classDos")
+    //@InheritConfiguration
     void updateDo(UserDto userDto, @MappingTarget UserDo userDo);
 
 

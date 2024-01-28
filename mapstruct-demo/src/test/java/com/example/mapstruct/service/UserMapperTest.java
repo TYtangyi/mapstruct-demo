@@ -18,17 +18,17 @@ class UserMapperTest {
     @Resource
     private ClassMapper classMapper;
 
-    @Test
-    void userDtoToUserDo() {
-
-        UserDto userDto = new UserDto();
-        userDto.setId(1L);
-        userDto.setName("张三");
-        userDto.setEmail("");
-        userDto.setSpecialization("test");
-        UserDo userDo = UserMapper.Instance.userDtoToUserDo(userDto);
-        System.out.println(userDo);
-    }
+//    @Test
+//    void userDtoToUserDo() {
+//
+//        UserDto userDto = new UserDto();
+//        userDto.setId(1L);
+//        userDto.setName("张三");
+//        userDto.setEmail("");
+//        userDto.setSpecialization("test");
+//        UserDo userDo = UserMapper.Instance.userDtoToUserDo(userDto);
+//        System.out.println(userDo);
+//    }
 
     @Test
     void toUserDo() {

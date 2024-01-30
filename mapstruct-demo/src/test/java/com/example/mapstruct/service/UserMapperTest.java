@@ -4,6 +4,7 @@ import com.example.mapstruct.model.ClassDo;
 import com.example.mapstruct.model.ClassDto;
 import com.example.mapstruct.model.UserDo;
 import com.example.mapstruct.model.UserDto;
+import lombok.SneakyThrows;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +19,17 @@ class UserMapperTest {
     @Resource
     private ClassMapper classMapper;
 
-//    @Test
-//    void userDtoToUserDo() {
-//
-//        UserDto userDto = new UserDto();
-//        userDto.setId(1L);
-//        userDto.setName("张三");
-//        userDto.setEmail("");
-//        userDto.setSpecialization("test");
-//        UserDo userDo = UserMapper.Instance.userDtoToUserDo(userDto);
-//        System.out.println(userDo);
-//    }
+    @Test
+    void userDtoToUserDo() {
+
+        UserDto userDto = new UserDto();
+        userDto.setId(1L);
+        userDto.setName("张三");
+        userDto.setEmail("");
+        userDto.setSpecialization("test");
+        UserDo userDo = UserMapper.Instance.userDtoToUserDo(userDto);
+        System.out.println(userDo);
+    }
 
     @Test
     void toUserDo() {
@@ -63,6 +64,7 @@ class UserMapperTest {
         System.out.println(userDo);
     }
 
+    @SneakyThrows
     @Test
     void toClassDos() {
         ClassDto classDto = new ClassDto();
